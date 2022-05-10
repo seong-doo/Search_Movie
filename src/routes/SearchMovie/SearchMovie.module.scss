@@ -1,0 +1,71 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/constants/levels';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/position';
+
+.searchMovieApp {
+  position: relative;
+  overflow: auto;
+  width: 360px;
+  height: 720px;
+  padding: 40px;
+  background-color: #363636;
+  border-radius: 60px;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: colors.$BIG_TITLE;
+  }
+
+  h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: colors.$MIDDLE_TITLE;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .searchResult {
+    height: 500px;
+    overflow: auto;
+
+    li {
+      width: 260px;
+      height: 130px;
+      padding: 10px;
+      border-radius: 20px;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.363);
+      color: #ffffff;
+      background: rgba(83, 81, 81, 0.219);
+      background: linear-gradient(160deg, rgba(31, 12, 12, 0.411) 0%, rgba(9, 9, 9, 1) 94%);
+
+      + li {
+        margin: 15px 0;
+      }
+
+      dl {
+        display: flex;
+        align-items: center;
+
+        > div {
+          flex: 1;
+        }
+
+        dt,
+        dd {
+          text-align: center;
+        }
+
+        dt {
+          display: none;
+        }
+
+        img {
+          height: 110px;
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+}

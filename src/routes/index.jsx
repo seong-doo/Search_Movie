@@ -1,11 +1,9 @@
 import styles from './Routes.module.scss'
-// import TodoList from './TodoList'
-import Weather from './Weathers'
+import Weather from './SearchMovie'
 
 const App = () => {
   return (
     <div className={styles.app}>
-      {/* <TodoList /> */}
       <Weather />
     </div>
   )
