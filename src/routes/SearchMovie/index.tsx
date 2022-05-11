@@ -1,34 +1,48 @@
 // import dayjs from 'dayjs'
 import styles from './SearchMovie.module.scss'
 
-import { useMount, useState } from 'hooks'
+import { useEffect, useState } from 'hooks'
 import { getMovieApi } from 'services/SearchMovie'
 import { IMovieAPIRes } from 'types/SearchMovie.d'
 import MovieItem from 'routes/SearchMovie/Item'
+import Pagination from './component/index'
 
 const Weather = () => {
   const [data, setData] = useState<IMovieAPIRes>()
+  const [pageNum, setPageNum] = useState(0)
 
-  useMount(() => {
+  useEffect(() => {
     getMovieApi({
-      s: 'iron man', // 검색 필터로 거른뒤 useState를 이용해 관리
-      page: 2, // 마찬가지로 useState를 이용해 관리
+      s: 'iron man',
+      page: pageNum + 1,
     }).then((res) => {
       setData(res.data)
-      console.log(res.data.Search)
     })
-  })
+  }, [pageNum])
+
+  if (!data) return null
+
+  const handlePageChange = ({ selected }: { selected: number }) => {
+    setPageNum(selected)
+  }
 
   return (
     <section className={styles.searchMovieApp}>
       <h1>Movie</h1>
       <h2>Search Result</h2>
       <div className={styles.searchResult}>
-        <ul>
-          {data?.Search.map((item) => {
-            return <MovieItem key={item.imdbID} item={item} />
-          })}
+        <ul className={styles.itemUl}>
+          {data.Search.map((item) => (
+            <MovieItem key={item.imdbID} item={item} />
+          ))}
         </ul>
+        <Pagination
+          initialPage={pageNum}
+          marginPagesDisplayed={0}
+          pageCount={data.Search.length}
+          pageRangeDisplayed={3}
+          handlePageChange={handlePageChange}
+        />
       </div>
     </section>
   )

@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb", "airbnb/hooks", "react-app", "prettier"],
+  "extends": ["airbnb", "airbnb/hooks", "react-app", "prettier", "plugin:react/recommended"],
   "env": {
     "browser": true,
     "jasmine": true,
@@ -19,10 +19,10 @@
   },
   "rules": {
     "arrow-body-style": "off",
+    "react/prop-types": "off",
     "semi": ["warn", "never"],
     "react/function-component-definition": ["warn", { "namedComponents": "arrow-function" }],
     "react/jsx-one-expression-per-line": "off",
-    "prettier/prettier": "error",
     "react/jsx-filename-extension": [
       "error",
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }

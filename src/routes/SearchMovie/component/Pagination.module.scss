@@ -1,0 +1,59 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/constants/levels';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/position';
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  outline: transparent;
+
+  & > li {
+    margin: 2px;
+    height: 30px;
+    width: 30px;
+  }
+
+  & > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    color: #333;
+    background-color: red;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: transparent;
+    cursor: pointer;
+
+    &:hover {
+      background-color: wheat;
+    }
+  }
+
+  & > .pageActive > a {
+    background-color: #fff;
+    border-color: #fff;
+    color: white;
+  }
+
+  & > .pageActive > a,
+  & > .pageActive > a:hover,
+  & > .pageActive > a:focus {
+    background-color: #0000;
+    border-color: #0000;
+    outline: transparent;
+    cursor: default;
+  }
+
+  & > .disabled > a {
+    cursor: default;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

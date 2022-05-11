@@ -7,22 +7,24 @@ interface Props {
 }
 
 const MovieItem = ({ item }: Props) => {
+  const { Poster, Title, Type, Year } = item
+
   return (
     <li key={item.imdbID}>
       <dl>
         <div>
           <dt>포스터</dt>
           <dd>
-            <img src={item.Poster} />
+            <img src={Poster} alt='poster' />
           </dd>
         </div>
         <div className={styles.moviInfo}>
           <dt>타이틀</dt>
-          <dd>{item.Title}</dd>
+          <dd>{Title}</dd>
           <dt>타입</dt>
-          <dd>{item.Type}</dd>
+          <dd>{Type}</dd>
           <dt>연도</dt>
-          <dd>{item.Year}</dd>
+          <dd>{Year}</dd>
         </div>
       </dl>
     </li>

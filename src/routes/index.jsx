@@ -1,10 +1,10 @@
 import styles from './Routes.module.scss'
-import Weather from './SearchMovie'
+import SearchMovie from './SearchMovie'
 
 const App = () => {
   return (
     <div className={styles.app}>
-      <Weather />
+      <SearchMovie />
     </div>
   )
 }

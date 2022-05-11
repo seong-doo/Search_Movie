@@ -29,41 +29,42 @@
   .searchResult {
     height: 500px;
     overflow: auto;
+    .itemUl {
+      li {
+        width: 260px;
+        height: 130px;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.363);
+        color: #ffffff;
+        background: rgba(83, 81, 81, 0.219);
+        background: linear-gradient(160deg, rgba(31, 12, 12, 0.411) 0%, rgba(9, 9, 9, 1) 94%);
 
-    li {
-      width: 260px;
-      height: 130px;
-      padding: 10px;
-      border-radius: 20px;
-      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.363);
-      color: #ffffff;
-      background: rgba(83, 81, 81, 0.219);
-      background: linear-gradient(160deg, rgba(31, 12, 12, 0.411) 0%, rgba(9, 9, 9, 1) 94%);
-
-      + li {
-        margin: 15px 0;
-      }
-
-      dl {
-        display: flex;
-        align-items: center;
-
-        > div {
-          flex: 1;
+        + li {
+          margin: 15px 0;
         }
 
-        dt,
-        dd {
-          text-align: center;
-        }
+        dl {
+          display: flex;
+          align-items: center;
 
-        dt {
-          display: none;
-        }
+          > div {
+            flex: 1;
+          }
 
-        img {
-          height: 110px;
-          border-radius: 15px;
+          dt,
+          dd {
+            text-align: center;
+          }
+
+          dt {
+            display: none;
+          }
+
+          img {
+            height: 110px;
+            border-radius: 15px;
+          }
         }
       }
     }
