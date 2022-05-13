@@ -1,0 +1,17 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/constants/levels';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/position';
+
+.navBar {
+  margin-top: 15px;
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  svg {
+    height: 35px;
+    width: 35px;
+  }
+}

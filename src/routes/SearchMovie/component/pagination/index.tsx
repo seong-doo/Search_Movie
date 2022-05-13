@@ -1,5 +1,6 @@
 import ReactPaginate from 'react-paginate'
-import styles from './Pagination.module.scss'
+import styles from './pagination.module.scss'
+import { LeftArrow, RightArrow } from 'assets/svgs'
 
 export interface IPaginationProps {
   initialPage: number
@@ -23,6 +24,8 @@ const Paginetion: React.FC<IPaginationProps> = ({
       pageCount={pageCount}
       pageRangeDisplayed={pageRangeDisplayed}
       onPageChange={handlePageChange}
+      nextLabel={<RightArrow />}
+      previousLabel={<LeftArrow />}
       containerClassName={styles.pagination}
       activeClassName={styles.pageActive}
       pageLinkClassName={styles.pageLink}

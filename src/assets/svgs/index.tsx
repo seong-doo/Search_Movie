@@ -1,0 +1,7 @@
+export { ReactComponent as LogoImage } from './logo.svg'
+export { ReactComponent as CheckIcon } from './check.svg'
+export { ReactComponent as LeftArrow } from './leftArrow.svg'
+export { ReactComponent as RightArrow } from './rightArrow.svg'
+export { ReactComponent as SearchIcon } from './search.svg'
+export { ReactComponent as StarIcon } from './star.svg'
+export { ReactComponent as HomeIcon } from './home.svg'
