@@ -17,6 +17,7 @@ const SearchMovie = () => {
 
   useEffect(() => {
     getMovieApi({
+      apikey: '67e64d0b',
       s: movieTitle,
       page: pageNum + 1,
     }).then((res) => {
