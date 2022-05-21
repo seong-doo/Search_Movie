@@ -1,4 +1,4 @@
-import styles from './searchMovie.module.scss'
+import styles from './SearchMovie.module.scss'
 import { IMovieInfo } from 'types/SearchMovie.d'
 
 interface Props {

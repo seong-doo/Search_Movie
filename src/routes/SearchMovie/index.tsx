@@ -1,5 +1,5 @@
 // import dayjs from 'dayjs'
-import styles from './searchMovie.module.scss'
+import styles from './SearchMovie.module.scss'
 
 import { useEffect, useState } from 'hooks'
 import { getMovieApi } from 'services/SearchMovie'
