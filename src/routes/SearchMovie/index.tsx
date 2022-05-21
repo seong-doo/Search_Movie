@@ -9,11 +9,25 @@ import MovieItem from 'routes/SearchMovie/Item'
 import Pagination from './component/pagination/index'
 import SearchBar from './component/searchBar'
 import NavBar from './component/navigation'
+import { axios } from 'utils/axios'
 
 const SearchMovie = () => {
   const [data, setData] = useState<IMovieAPIRes>()
   const [pageNum, setPageNum] = useState(0)
   const [movieTitle, setMovieTitle] = useState('')
+
+  axios({
+    url: 'http://apis.data.go.kr/B551182/diseaseInfoService/getDissNameCodeList', // 통신할 웹문서
+    method: 'get', // 통신할 방식
+    data: {
+      // 인자로 보낼 데이터
+      ServiceKey: 'JDxWm/ZI8QYLW3HekZ2yqKFqcHedPCx1tS/Dyf9wDzQhzm9KS6t3Sb61Hx2/MAMuLmkOtktLdV5Mn4k4sKHVNA==',
+      searchText: '암',
+    },
+  }).then((res) => {
+    // eslint-disable-next-line
+    console.log(res)
+  })
 
   useEffect(() => {
     getMovieApi({
