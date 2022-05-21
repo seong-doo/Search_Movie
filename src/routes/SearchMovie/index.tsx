@@ -20,7 +20,7 @@ const SearchMovie = () => {
 
   axios
     .get(
-      `/B551182/diseaseInfoService/getDissNameCodeList${PROXY}?ServiceKey=JDxWm/ZI8QYLW3HekZ2yqKFqcHedPCx1tS/Dyf9wDzQhzm9KS6t3Sb61Hx2/MAMuLmkOtktLdV5Mn4k4sKHVNA==&searchText=암`
+      `${PROXY}/B551182/diseaseInfoService/getDissNameCodeList?ServiceKey=JDxWm/ZI8QYLW3HekZ2yqKFqcHedPCx1tS/Dyf9wDzQhzm9KS6t3Sb61Hx2/MAMuLmkOtktLdV5Mn4k4sKHVNA==&searchText=암`
     )
     .then((res) => {
       // eslint-disable-next-line
