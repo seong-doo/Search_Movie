@@ -21,7 +21,7 @@ const SearchMovie = () => {
   axios({
     url: `${PROXY}`, // 통신할 웹문서
     method: 'get', // 통신할 방식
-    data: {
+    params: {
       // 인자로 보낼 데이터
       ServiceKey: 'JDxWm/ZI8QYLW3HekZ2yqKFqcHedPCx1tS/Dyf9wDzQhzm9KS6t3Sb61Hx2/MAMuLmkOtktLdV5Mn4k4sKHVNA==',
       searchText: '암',
