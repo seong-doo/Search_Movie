@@ -1,9 +1,7 @@
 // import dayjs from 'dayjs'
 import styles from './favorites.module.scss'
 
-import MovieItem from 'routes/SearchMovie/Item'
 import NavBar from '../component/navigation/index'
-import { IMovieInfo } from 'types/SearchMovie.d'
 
 const Favorites = () => {
   return (

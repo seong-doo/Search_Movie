@@ -12,12 +12,8 @@ const MovieItem = ({ item }: Props) => {
     e.currentTarget.style.transform = `translateX(-260px)`
   }
 
-  const handleUndo: React.MouseEventHandler<HTMLButtonElement> = (e) => {
-    // e.currentTarget.offsetParent.style.transform = 'translateX(0)'
-  }
-
   const addFavorites: React.MouseEventHandler<HTMLButtonElement> = () => {
-    setFavoriteData()
+    // setFavoriteData()
     localStorage.setItem(`favoriteMovie`, JSON.stringify({ Poster, Title, Type, Year, imdbID }))
   }
 
@@ -46,7 +42,7 @@ const MovieItem = ({ item }: Props) => {
           <button type='button' className={styles.favoriteBtn} onClick={addFavorites}>
             Add!
           </button>
-          <button type='button' className={styles.favoriteBtn} onClick={handleUndo}>
+          <button type='button' className={styles.favoriteBtn}>
             UNDO
           </button>
         </div>
