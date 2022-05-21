@@ -16,8 +16,10 @@ const SearchMovie = () => {
   const [pageNum, setPageNum] = useState(0)
   const [movieTitle, setMovieTitle] = useState('')
 
+  const PROXY = window.location.hostname === 'localhost' ? '' : '/proxy'
+
   axios({
-    url: 'http://apis.data.go.kr/B551182/diseaseInfoService/getDissNameCodeList', // 통신할 웹문서
+    url: PROXY, // 통신할 웹문서
     method: 'get', // 통신할 방식
     data: {
       // 인자로 보낼 데이터
